@@ -1,0 +1,237 @@
+:root {
+  --soft-grey: #ABAABA;
+  --white: #FFF;
+  --red: #FF3030;
+  --black: #090909;
+}
+
+* {
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--soft-grey);
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 20px;
+  width: 1120px;
+  height: 60px; 
+
+  position: absolute;
+
+  user-select: none;
+
+  z-index: 3;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 17px;
+}
+
+.title {
+  color: var(--white);
+  font-size: 32px;
+}
+
+.nav-elments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-buttons {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.nav-buttons > li > a{
+  color: var(--white);
+  font-size: 16px;
+  line-height: 110%;
+
+  cursor: pointer;
+}
+
+.nav-buttons > *:not(:last-child) > a{
+  font-weight: 400;
+}
+
+.signup-btn {
+  background: var(--red);
+  padding: 10px 30px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.hero {
+  display: flex;
+  position: relative;
+  align-items: center;
+  
+  flex-direction: column;
+}
+
+.hero-background {
+  width: 1440px;
+  height: 554px;
+  display: inline-block;
+  
+  background-image: url("public/images/Cybertruck-website-Tesla-interior-1.jpg");
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.hero-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(8, 8, 8) 25%, rgba(0, 0, 0, 0) 50%);
+  z-index: 1;
+}
+
+.hero-cutter {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 454px;
+  border-left: 1440px solid transparent;
+  border-bottom: 100px solid var(--soft-grey); 
+
+  z-index: 2;
+}
+
+.hero > h1 {
+  position: absolute;
+  width: 605px;
+  height: 234px;
+
+  left: 160px;
+  top: 138px;
+
+  margin: 0;
+
+  color: var(--white);
+  font-size: 130px;
+  line-height: 90%;
+  font-weight: 700;
+
+  z-index: 2;
+}
+
+.hero > h1 > span {
+  color: var(--red);
+}
+
+.characteristics {
+  position: absolute;
+  display: inline-flex;
+
+  padding: 20px 100px;
+  top: 440px;
+
+  align-items: center;
+  background: var(--white);
+
+  gap: 120px;
+
+  z-index: 2;
+}
+
+.characteristics > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.characteristics > div > h3{
+  color: var(--red);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 90%;
+
+  margin: 0;
+}
+
+.about {
+  display: flex;
+
+  margin-top: 140px;
+
+  width: 1120px;
+
+  gap: 115px;
+}
+
+.about-image {
+  width: 550px;
+  height: 290px;
+  background: url(public/images/tesla-about.jpg);
+  background-size: cover;
+  background-position: 0% 50%;
+}
+
+.best-suv {
+  height: 430px;
+  width: 455px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 30px;
+}
+
+.best-suv-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.red-line {
+  width: 10px;
+  height: 88px;
+  background: var(--red);
+}
+
+.best-suv-header > h2{
+  width: 422px;
+
+  color: var(--black);
+  font-size: 50px;
+
+  line-height: 110%;
+
+  margin: 0;
+}
+
+.best-suv > p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 170%;
+
+  width: 455px;
+  height: 222px;
+
+  margin: 0;
+}
