@@ -94,7 +94,6 @@ body {
 }
 
 .hero-background {
-  width: 1440px;
   height: 554px;
   display: inline-block;
   
@@ -196,7 +195,7 @@ body {
 .about-image {
   width: 550px;
   height: 290px;
-  background: url(public/images/tesla-about.jpg);
+  background: url("public/images/tesla-about.jpg");
   background-size: cover;
   background-position: 0% 50%;
 }
@@ -260,7 +259,7 @@ body {
 
 .footer {
   height: 368px;
-  width: 1440px;
+  width: 100%;
 
   display: flex; 
   flex-direction: column;
@@ -330,10 +329,6 @@ body {
 }
 
 @media (max-width: 1080px) {
-  .nav-bar {
-    width: 936px;
-  }
-  
   .nav-elements {
     display: none;
   }
@@ -348,22 +343,50 @@ body {
     height: 180px;
     width: 390px;
 
-    left: 252px;
+    left: 100px;
   }
-
+  
   .about {
     flex-direction: column;
   }
 
-  .ready-social,
+  .social-media{
+    gap: 20px;
+  }
+
+  .ready-social > h3 {
+    font-size: 38px;
+  }
+
+  .privacy-terms p {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 720px) {
+  div.email > p {
+    display: none;
+  }
+
   .email-privacy-terms {
-    width: 936px;
+    margin-top: 100px;
   }
 }
 
 @media (max-width: 554px) {
-  .nav-bar {
-    width: 490px;
+  .nav-bar,
+  .ready-social,
+  .email-privacy-terms {
+    width: 90%;
+  }
+
+  .logo-container > svg{
+    width: 80px;
+  }
+
+  .title {
+    font-size: 20px;
   }
 
   .hero > h1 {
@@ -372,12 +395,20 @@ body {
     height: 130px;
     width: 350px;
 
-    left: 475px;
+    left: 32px;
   }
 
-  .ready-social, 
-  .email-privacy-terms {
-    width: 490px;
+  .hero-background::before {
+    background: linear-gradient(to right, rgb(8, 8, 8) 0%, rgba(0, 0, 0, 0) 10%);
+  }
+
+  .characteristics {
+    gap: 40px;
+    padding: 20px 40px;
+  }
+
+  .characteristics > div > h3 {
+    font-size: 20px;
   }
 
   .ready-social > h3 {
@@ -393,7 +424,7 @@ body {
     gap: 20px;
   }
 
-  div.email > p {
-    display: none;
+  .email-privacy-terms {
+    margin-top: 60px;
   }
 }
