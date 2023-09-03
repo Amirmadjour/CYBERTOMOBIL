@@ -52,15 +52,3 @@ else {
   }
 }
 
-
-if(currentwidth > 720) {
-  document.getElementById("nav-bar").style.width = currentwidth - 144 + "px";
-  document.getElementById("ready-social").style.width = currentwidth - 144 + "px";
-  document.getElementById("email-privacy-terms").style.width = currentwidth - 144 + "px";
-}
-else if(currentwidth > 554 && currentwidth <= 720) {
-  document.getElementById("nav-bar").style.width = currentwidth - 100 + "px";
-  document.getElementById("ready-social").style.width = currentwidth - 100 + "px";
-  document.getElementById("email-privacy-terms").style.width = currentwidth - 100 + "px";
-  console.log("That worked!!");
-}

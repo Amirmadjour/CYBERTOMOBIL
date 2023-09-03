@@ -26,7 +26,7 @@ body {
   justify-content: space-between;
 
   margin-top: 20px;
-  width: 1120px;
+  width: 90%;
   height: 60px; 
 
   position: absolute;
@@ -276,7 +276,7 @@ body {
 }
 
 .ready-social {
-  width: 1120px;
+  width: 90%;
 
   display: flex;
   align-items: center;
@@ -303,7 +303,7 @@ body {
 }
 
 .email-privacy-terms {
-  width: 1120px;
+  width: 90%;
 
   display: flex;
   align-items: center;
@@ -401,12 +401,6 @@ body {
 }
 
 @media (max-width: 554px) {
-  .nav-bar,
-  .ready-social,
-  .email-privacy-terms {
-    width: 90%;
-  }
-
   .logo-container > svg{
     width: 80px;
   }
@@ -465,7 +459,7 @@ body {
     width: 100%;
     height: auto;
   }
-  
+
   .ready-social > h3 {
     font-size: 32px;
 
