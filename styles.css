@@ -17,8 +17,6 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: var(--soft-grey);
-  
-  overflow-x: hidden;
 }
 
 .nav-bar {
@@ -95,8 +93,6 @@ body {
 
 .hero-background {
   height: 554px;
-  width: 100%;
-  display: inline-block;
   
   background-image: url("public/images/Cybertruck-website-Tesla-interior-1.jpg");
   background-size: 75%;

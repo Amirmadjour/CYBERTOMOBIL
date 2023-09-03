@@ -4,7 +4,7 @@ const characteristics = document.getElementById("characteristics");
 const currentwidth = window.innerWidth;
 
 
-background_image.style.width = currentwidth + "px";
+background_image.style.width = document.documentElement.clientWidth + "px";
 
 
 if(currentwidth >= 1280) {
