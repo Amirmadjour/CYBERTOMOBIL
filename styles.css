@@ -431,6 +431,8 @@ body {
 
   .about {
     height: auto;
+
+    margin-bottom: 0;
   }
 
   .about-image {
