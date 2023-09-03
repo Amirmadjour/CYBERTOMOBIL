@@ -6,7 +6,6 @@ const currentwidth = window.innerWidth;
 
 background_image.style.width = currentwidth + "px";
 
-hero_cutter.style.borderLeft = currentwidth + "px solid transparent";
 
 if(currentwidth >= 1280) {
   background_image.style.backgroundSize = "75%";
