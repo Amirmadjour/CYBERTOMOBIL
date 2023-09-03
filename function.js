@@ -8,7 +8,10 @@ background_image.style.width = currentwidth + "px";
 
 hero_cutter.style.borderLeft = currentwidth + "px solid transparent";
 
-if(currentwidth < 1280 && currentwidth > 1200) {
+if(currentwidth >= 1280) {
+  background_image.style.backgroundSize = "75%";
+}
+else if(currentwidth < 1280 && currentwidth > 1200) {
   background_image.style.backgroundSize = "80%";
 }
 else if(currentwidth <= 1200 && currentwidth > 1050) {
@@ -30,19 +33,34 @@ else if(currentwidth <= 650 && currentwidth > 550) {
   background_image.style.backgroundSize = "180%";
 }
 else if(currentwidth <= 550 && currentwidth > 450) {
-  background_image.style.backgroundSize = "200%";
-  background_image.style.backgroundPositionX = "50%";
+  background_image.style.backgroundSize = "250%";
 }
-else if(currentwidth <= 450 && currentwidth > 350) {
-  background_image.style.backgroundSize = "160%";
-}
-else {
+else if(currentwidth <= 450 && currentwidth > 375) {
   background_image.style.backgroundSize = "300%";
 }
+else {
+  background_image.style.backgroundSize = "400%";
+  
+}
+
+if(currentwidth <= 1000 && currentwidth > 550) {
+  background_image.style.backgroundPositionX = "80%";
+}
+else {
+  if(currentwidth <= 550) {
+    background_image.style.backgroundPositionX = "50%";
+  }
+}
 
 
-if(currentwidth > 554) {
+if(currentwidth > 720) {
   document.getElementById("nav-bar").style.width = currentwidth - 144 + "px";
   document.getElementById("ready-social").style.width = currentwidth - 144 + "px";
   document.getElementById("email-privacy-terms").style.width = currentwidth - 144 + "px";
+}
+else if(currentwidth > 554 && currentwidth <= 720) {
+  document.getElementById("nav-bar").style.width = currentwidth - 100 + "px";
+  document.getElementById("ready-social").style.width = currentwidth - 100 + "px";
+  document.getElementById("email-privacy-terms").style.width = currentwidth - 100 + "px";
+  console.log("That worked!!");
 }
