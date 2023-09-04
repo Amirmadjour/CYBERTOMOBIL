@@ -17,6 +17,8 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: var(--soft-grey);
+
+  overflow-x: hidden;
 }
 
 .nav-bar {
@@ -87,28 +89,29 @@ body {
   display: flex;
   position: relative;
   align-items: center;
+  width: 100%;
   
   flex-direction: column;
 }
 
 .hero-background {
-  height: 554px;
-  
-  background-image: url("public/images/Cybertruck-website-Tesla-interior-1.jpg");
-  background-size: 75%;
-  background-repeat: no-repeat;
-  background-position: 100% 0;
+  width: 100%;
+  height: auto;
 }
 
-.hero-background::before {
-  content: "";
+.hero-background-image {
+  height: 554px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-gradient {
+  width: 100%;
+  height: 554px;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
   background: linear-gradient(to right, rgb(8, 8, 8) 25%, rgba(0, 0, 0, 0) 50%);
-  z-index: 1;
 }
 
 .hero-cutter {
@@ -192,9 +195,8 @@ body {
 .about-image {
   width: 550px;
   height: 290px;
-  background: url("public/images/tesla-about.jpg");
-  background-size: cover;
-  background-position: 0% 50%;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .best-suv {
@@ -334,8 +336,8 @@ body {
     display: block;
   }
 
-  .about {
-    width: 100%;
+  .hero-gradient {
+    background: linear-gradient(to right, rgb(8, 8, 8) 15%, rgba(0, 0, 0, 0) 30%);
   }
 
   .hero > h1 {
@@ -348,6 +350,7 @@ body {
   }
   
   .about {
+    width: 100%;
     flex-direction: column;
   }
 
@@ -370,6 +373,10 @@ body {
     width: 100px;
   }
 
+  .hero-gradient {
+    background: linear-gradient(to right, rgb(8, 8, 8) 5%, rgba(0, 0, 0, 0) 25%);
+  }
+
   .hero > h1 {
     left: 50px;
 
@@ -383,10 +390,6 @@ body {
 
   .title {
     font-size: 26px;
-  }
-
-  .hero-background::before {
-    background: linear-gradient(to right, rgb(8, 8, 8) 0%, rgba(0, 0, 0, 0) 25%);
   }
 
   div.email > p {
@@ -407,6 +410,10 @@ body {
     font-size: 20px;
   }
 
+  .hero-gradient {
+    background: linear-gradient(to right, rgb(8, 8, 8) 0%, rgba(0, 0, 0, 0) 25%);
+  }
+
   .hero > h1 {
     font-size: 70px;
     
@@ -414,10 +421,6 @@ body {
     width: 270px;
 
     left: 32px;
-  }
-
-  .hero-background::before {
-    background: linear-gradient(to right, rgb(8, 8, 8) 0%, rgba(0, 0, 0, 0) 10%);
   }
 
   .characteristics {
@@ -437,6 +440,7 @@ body {
 
   .about-image {
     width: 90%;
+    height: auto;
   }
 
   .best-suv {
